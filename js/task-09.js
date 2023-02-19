@@ -9,8 +9,9 @@ function getRandomHexColor() {
 }
 
 const onChanceColorBtnClick = () => {
-  body.style.backgroundColor = getRandomHexColor(),
-  colorValue.textContent = body.style.backgroundColor
+  const color = getRandomHexColor();
+  body.style.backgroundColor = color;
+  colorValue.textContent = color;
 }; 
 
 changeColorBtn.addEventListener('click', onChanceColorBtnClick);

@@ -8,7 +8,12 @@ const onFormSubmit = event => {
   if (email.value === '' || password.value === '') {
     return alert('Заповніть пусті поля форми');
   }
-  console.log(`Login: ${email.value}, Password: ${password.value}`);
+  const message = {
+    Email:  email.value ,
+    Password: password.value
+}
+
+  console.log(message);
   event.currentTarget.reset();
 };
 

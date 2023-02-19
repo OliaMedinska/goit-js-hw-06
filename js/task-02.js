@@ -9,17 +9,17 @@ const ingredients = [
 
 
 const listEl = document.querySelector('#ingredients');
-let newEl = new DocumentFragment();
+let newEl = [];
 
 for (let ingredient of ingredients) {
   const ingredientsList = document.createElement('li');
   ingredientsList.textContent+=ingredient;
   ingredientsList.classList.add('item');
 
-  newEl.appendChild(ingredientsList);
+  newEl.push(ingredientsList);
 }
 
-document.querySelector('#ingredients').append(newEl); 
+listEl.append(...newEl); 
 
 
 /*
